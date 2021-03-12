@@ -1,7 +1,7 @@
 ---
 name: Tool Add
 about: Adding the tool
-title: Tool
+title: ''
 labels: ''
 assignees: ''
 
