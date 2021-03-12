@@ -34,6 +34,6 @@ jobs:
           echo "${{ github.event.issue.body }}" >> "${{ github.event.issue.title }}".md
 
       - name: Push new README.md
-        uses: mikeal/publish-to-github-action@master
+        uses: mikeal/publish-to-github-action@main
         env:
           GITHUB_TOKEN: ${{ secrets.ISSUE_TOKEN }}
