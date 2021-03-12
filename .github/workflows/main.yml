@@ -26,3 +26,9 @@ jobs:
         run: echo "$GITHUB_CONTEXT"
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
+
+# Create a md file with the name of the tool 
+      - name: Create a file for the tool
+        run: touch "${{ github.event.issue.title }}"
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
