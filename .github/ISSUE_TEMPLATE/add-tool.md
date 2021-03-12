@@ -13,7 +13,14 @@ assignees: ''
 
 1. Title of the issue should be same as the `tool name` ex. Hadoop
 
-2. Remove all the other contents in the body of issue and just add the `description of the tool`.
+2. Copy the below format and remove all the other contents in the body of issue to add the `description of the tool`.
+
+---
+short_name: <tool name in small letter ex. jenkins>
+name: <tool name; keeping 1st letter capital ex. Jenkins>
+---
+<description of tool>
+
 
 **Note:**
 
