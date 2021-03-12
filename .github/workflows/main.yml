@@ -30,7 +30,7 @@ jobs:
 # Create a md file with the name of the tool 
       - name: Create a file for the tool
         run: |
-          cd _posts
+          cd _topics
           touch "${{ github.event.issue.title }}".md
           echo "${{ github.event.issue.body }}" >> "${{ github.event.issue.title }}".md
 
