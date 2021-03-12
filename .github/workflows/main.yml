@@ -29,6 +29,12 @@ jobs:
 
 # Create a md file with the name of the tool 
       - name: Create a file for the tool
-        run: touch "${{ github.event.issue.title }}"
+        run: |
+	  touch "${{ github.event.issue.title }}".md
+	  echo "${{ github.event.issue.body }}" >> "${{ github.event.issue.title }}".md
+
+# Runs a set of commands using the runners shell
+      - name: Push new README.md
+        uses: mikeal/publish-to-github-action@master
         env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
+          GITHUB_TOKEN: ${{ secrets.ISSUE_TOKEN }}
