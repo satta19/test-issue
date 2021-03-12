@@ -30,12 +30,11 @@ jobs:
 # Create a md file with the name of the tool 
       - name: Create a file for the tool
         run: |
-	  touch "${{ github.event.issue.title }}".md
-	  echo "${{ github.event.issue.body }}" >> "${{ github.event.issue.title }}".md
+          touch "${{ github.event.issue.title }}".md
+          echo "${{ github.event.issue.body }}" >> "${{ github.event.issue.title }}".md
 
-# Runs a set of commands using the runners shell
       - name: Push new README.md
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.ISSUE_TOKEN }}
           branch: ${{ github.ref }}
