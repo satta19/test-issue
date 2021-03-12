@@ -35,6 +35,7 @@ jobs:
 
 # Runs a set of commands using the runners shell
       - name: Push new README.md
-        uses: mikeal/publish-to-github-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.ISSUE_TOKEN }}
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
