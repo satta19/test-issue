@@ -6,9 +6,9 @@
 
 2. Copy the below format to add the tool name.
 
-`name`: Tool name 🔨
+    `name`: Tool name 🔨
 
-`description`: About the tool 📄
+    `description`: About the tool 📄
 
 
 **Note:**
